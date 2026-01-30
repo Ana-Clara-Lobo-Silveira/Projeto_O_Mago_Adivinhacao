@@ -10,7 +10,7 @@
             display: flex;
             height: 100vh;
             width: 100vw;
-            background-color: rgb(29, 0, 80);
+            background: linear-gradient(to top,rgba(1, 1, 36, 1) 0%, rgba(5, 5, 89, 1) 67%, rgba(2, 2, 156, 1) 100%);
             overflow: hidden;
             align-items: center;
             justify-content: center;
@@ -21,8 +21,19 @@
             padding: 15px;
             text-align: center;
             color: rgb(209, 209, 209);
+            font-size: 20px;
         }
-
+        button{
+            color: rgb(209, 209, 209);
+            background-color: rgb(59, 0, 161);
+            border-radius: 25px;
+            padding: 10px;
+            width: 60%;
+            border-color: rgb(209, 209, 209);;
+        }
+        .info{
+            font-size: 11px;
+        }
     </style>
 
 </head>
@@ -32,13 +43,33 @@
     <div class="container">
         <h1>O Mago da Adivinhação✨</h1>
         <p>Clique no botão abaixo para iniciar a mágica!🎇🌟</p>
-        <button onclick="mago()">iniciar o feitiço</button>
-        <p>Gostaria de tentar novamente? Apenas clique no botão acima.</p>
+        <button onclick="mago()">Iniciar o feitiço</button>
+        <p class="info">Gostaria de tentar novamente? Apenas clique no botão acima.</p>
     </div>
 
+ 
     <script>
         function mago(){
-            alert('')
+            alert('Seja muito bem-vindo ao nosso jogo!');
+            alert('Sua tarefa é seguir nossas instruções, através de feitiços, entraremos na sua mente...');
+            alert('Antes de começar tenha uma calculadora em mãos!');
+            let valor_final = Number(prompt('Qual número você deseja qua apareça na sua calculadora após nossa mágica?'));
+/****************************************************************************************************************************/ 
+            let mult_01 = valor_final*2;
+            let valor_inicial = Number(prompt('Agora, escolha um número para ser o valor inicial. Lembre-se dele!'));
+            let mult_02 = valor_inicial*2;
+            let soma = mult_02 + mult_01;
+            let div = soma/2;
+            let sub = div - valor_inicial;
+/****************************************************************************************************************************/
+            alert('Pronto?');
+            alert('Multiplique o número escolhido por 2.');
+            alert('Agora, some '+ mult_01 +' ao resultado.');
+            alert('Divida o valor encontrado por 2.');
+            alert('Por fim, subtraia o valor inicial do resultado da divisão.');
+            alert('O número que está na sua calculadora é: '+ sub+ '?');
+            alert('Caso nossa mágica não tenha dado certo, tente novamente e lembre-se de seguir as instruções corretamente!');
+   
         };
     </script>
 </body>
