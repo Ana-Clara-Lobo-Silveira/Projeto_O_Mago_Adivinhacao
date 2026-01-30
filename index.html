@@ -29,7 +29,8 @@
             border-radius: 25px;
             padding: 10px;
             width: 60%;
-            border-color: rgb(209, 209, 209);;
+            border-color: rgb(209, 209, 209);
+            margin: 10px;
         }
         .info{
             font-size: 11px;
@@ -44,6 +45,7 @@
         <h1>O Mago da Adivinhação✨</h1>
         <p>Clique no botão abaixo para iniciar a mágica!🎇🌟</p>
         <button onclick="mago()">Iniciar o feitiço</button>
+        <button onclick="magoDeNovo()">Jogar novamente</button>
         <p class="info">Gostaria de tentar novamente? Apenas clique no botão acima.</p>
     </div>
 
@@ -68,6 +70,29 @@
             alert('Divida o valor encontrado por 2.');
             alert('Por fim, subtraia o valor inicial do resultado da divisão.');
             alert('O número que está na sua calculadora é: '+ sub+ '?');
+            alert('Caso nossa mágica não tenha dado certo, tente novamente e lembre-se de seguir as instruções corretamente!');
+   
+        };
+        
+        function magoDeNovo(){
+            alert('Seja muito bem-vindo ao nosso jogo!');
+            alert('Sua tarefa é seguir nossas instruções, descubra a nossa...');
+            alert('Pegue sua calculadora!');
+            let valor_final = Number(prompt('Qual número você deseja qua apareça na sua calculadora após nossa mágica?'));
+/****************************************************************************************************************************/ 
+            let mult_01 = valor_final*2;
+            let valor_inicial = Number(prompt('Agora, escolha um número para ser o valor inicial. Lembre-se dele!'));
+            let mult_02 = valor_inicial*2;
+            let soma = mult_02 + mult_01;
+            let div = soma/2;
+            let sub = div - valor_inicial;
+/****************************************************************************************************************************/
+            alert('Vamos lá?');
+            alert('Multiplique o número inicial por 2.');
+            alert('Some '+ mult_01 +' ao resultado anterior.');
+            alert('Faça uma divisão por 2.');
+            alert('Subtraia o valor inicial do resultado da divisão.');
+            alert('Olha sua calculadora, acertamos?');
             alert('Caso nossa mágica não tenha dado certo, tente novamente e lembre-se de seguir as instruções corretamente!');
    
         };
