@@ -48,6 +48,7 @@
         <button onclick="magoDeNovo()">Jogar novamente</button>
         <button onclick="magoExplica()">Mago explica</button>
         <button onclick="magoTriplo()">Mago triplo</button>
+        <button onclick="magoComFator()">Mago com fatores</button>
         <p class="info">Gostaria de tentar novamente? Apenas clique no botão acima.</p>
     </div>
 
@@ -131,6 +132,30 @@
             alert('Multiplique o número escolhido por 3.');
             alert('Agora, some '+ mult_01 +' ao resultado.');
             alert('Divida o valor encontrado por 3.');
+            alert('Por fim, subtraia o valor inicial do resultado da divisão.');
+            alert('O número que está na sua calculadora é: '+ sub+ '?');
+            alert('Caso nossa mágica não tenha dado certo, tente novamente e lembre-se de seguir as instruções corretamente!');
+   
+        };
+
+        function magoComFator(){
+            alert('Seja muito bem-vindo ao nosso jogo!');
+            alert('Sua tarefa é seguir nossas instruções, através de feitiços, entraremos na sua mente...');
+            alert('Antes de começar tenha uma calculadora em mãos!');
+            let valor_final = Number(prompt('Qual número você deseja qua apareça na sua calculadora após nossa mágica?'));
+            let valor_fator = Number(prompt('Entre os fatores 2,3 e 4, com qual você prefere executar a mágica?'));
+/****************************************************************************************************************************/ 
+            let mult_01 = valor_final*valor_fator;
+            let valor_inicial = Number(prompt('Agora, escolha um número para ser o valor inicial. Lembre-se dele!'));
+            let mult_02 = valor_inicial*valor_fator;
+            let soma = mult_02 + mult_01;
+            let div = soma/valor_fator;
+            let sub = div - valor_inicial;
+/****************************************************************************************************************************/
+            alert('Pronto?');
+            alert('Multiplique o número escolhido por ' + valor_fator+'.');
+            alert('Agora, some '+ mult_01 +' ao resultado.');
+            alert('Divida o valor encontrado por' + valor_fator+'.');
             alert('Por fim, subtraia o valor inicial do resultado da divisão.');
             alert('O número que está na sua calculadora é: '+ sub+ '?');
             alert('Caso nossa mágica não tenha dado certo, tente novamente e lembre-se de seguir as instruções corretamente!');
